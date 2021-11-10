@@ -40,8 +40,8 @@ console.log("current value of B is ", b);
 
 ```javascript
 let base = readlineSync.questionInt("Digite a base do triangulo. >>> ");
-let altura = readlineSync.questionInt("Digite a base do triangulo. >>> ");
-console.log(`A Área do retângulo é ${base * altura}`);
+let height = readlineSync.questionInt("Digite a base do triangulo. >>> ");
+console.log(`A Área do retângulo é ${base * height}`);
 ```
 
 4. Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias eescreva a idade dessa pessoa expressa apenas em dias. Considerar ano com 365 dias emês com 30 dias.
