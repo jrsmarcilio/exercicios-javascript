@@ -118,4 +118,70 @@ const currencyFormatES6 = (value) =>
 // const totalCost = NumberApples < 12 ? NumberApples * 1.3 : NumberApples;
 // console.log(`Custo total da compra ${currencyFormatES6(totalCost)}`);
 
-// 12. Ler as notas da 1a. e 2a. avaliações de um aluno. Calcular a média aritmética simples e escrever uma mensagem que diga se o aluno foi ou não aprovado (considerar que notaigual ou maior que 6 o aluno é aprovado). Escrever também a média calculada.
+// 12. Ler as notas da 1a. e 2a. avaliações de um aluno. Calcular a média aritmética simples e escrever uma mensagem que diga se o aluno foi ou não aprovado (considerar que nota igual ou maior que 6 o aluno é aprovado). Escrever também a média calculada.
+
+// const firstNote = readlineSync.questionInt("Primeira Nota >>> ");
+// const lastNote = readlineSync.questionInt("Última Nota >>> ");
+// const media = (firstNote + lastNote) / 2;
+// const situation = media >= 6 ? "APROVADO" : "REPROVADO";
+// console.log(`Aluno ${situation} com média de ${media}`);
+
+// 13) Ler o ano atual e o ano de nascimento de uma pessoa. Escrever uma mensagem que diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que a pessoa nasceu).
+
+// const currentYear = new Date().getFullYear();
+// const yearBirth = readlineSync.questionInt(
+//   "Informe seu ano de nascimento. Ex.: 1999 >>> "
+// );
+// const situation = currentYear - yearBirth >= 18 ? "PODERÁ" : "NÃO PODERÁ";
+// console.log(`Você ${situation} votar esse ano.`);
+
+//14) Ler dois valores (considere que não serão lidos valores iguais) e escrevê-los em ordem crescente.
+
+// const firstValue = readlineSync.questionFloat(`Digite o primeiro valor. >>> `);
+// let lastValue;
+
+// do {
+//   lastValue = readlineSync.questionFloat(`Digite o último valor. >>> `);
+// } while (lastValue === firstValue);
+
+// console.log([firstValue, lastValue].sort());
+
+//15) Ler a hora de início e a hora de fim de um jogo de Xadrez (considere apenas horas inteiras, sem os minutos) e calcule a duração do jogo em horas, sabendo-se que o tempo máximo de duração do jogo é de 24 horas e que o jogo pode iniciar em um dia e terminar no dia seguinte.
+
+// const initHour = readlineSync.questionInt("Hora inicial do game. Ex.: 16 >>> ");
+// const finalHour = readlineSync.questionInt("Hora final do game. Ex.: 18 >>> ");
+// if (initHour > 23 || finalHour > 23 || initHour < 0 || finalHour < 0) return;
+
+// const duration =
+//   finalHour - initHour < 0 ? finalHour - initHour + 24 : finalHour - initHour;
+
+// console.log(`O jogo teve a duração de ${duration}hs`);
+
+//16) Escreva um algoritmo para ler 2 valores e se o segundo valor informado for ZERO, deve ser lido um novo valor, ou seja, para o segundo valor não pode ser aceito o valor zero e imprimir o resultado da divisão do primeiro valor lido pelo segundo valor lido. (utilizar a estrutura REPITA).
+
+// const firstValue = readlineSync.questionFloat(`Digite o primeiro valor. >>> `);
+// let lastValue;
+
+// do {
+//   lastValue = readlineSync.questionFloat(`Digite o último valor. >>> `);
+// } while (lastValue === 0);
+
+// console.log(`O resultado da divisão: ${firstValue / lastValue}`);
+
+//17) Reescreva o exercício anterior utilizando a estrutura ENQUANTO.
+
+const firstValue = readlineSync.questionFloat(`Digite o primeiro valor. >>> `);
+let lastValue = readlineSync.questionFloat(`Digite o último valor. >>> `);
+
+while (lastValue === 0) {
+  console.log(`\nVALOR INVÁLIDO`);
+  lastValue = readlineSync.questionFloat(`Digite o valor novamente. >>> `);
+}
+
+console.log(`O resultado da divisão: ${firstValue / lastValue}`);
+
+//18) Acrescentar uma mensagem de 'VALOR INVÁLIDO' no exercício [44] caso o segundo valor informado seja ZERO.
+
+//19) Acrescentar uma mensagem de 'VALOR INVÁLIDO' no exercício [45] caso o segundo valor informado seja ZERO.
+
+//20) Escreva um algoritmo para ler as notas da 1a. e 2a. avaliações de um aluno, calcule eimprima a média (simples) desse aluno. Só devem ser aceitos valores válidos durante aleitura (0 a 10) para cada nota.
